@@ -20,6 +20,12 @@ router.post('/', async (req, res) => {
   res.status(201).json({ success: true, payload: result });
 });
 
+router.patch('/:id', async (req, res) => {
+const editData = req.body.completed;
+const result = await completedItem(req.params.id, editData);
+res.json({success: true, payload: result})
+});
+
 // router.delete('/', async function (req, res) {
 //   const result = await deleteAll();
 
