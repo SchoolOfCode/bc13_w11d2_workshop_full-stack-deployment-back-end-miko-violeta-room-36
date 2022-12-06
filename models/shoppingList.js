@@ -19,7 +19,7 @@ export async function postListItem(listItem) {
 }
 
 export async function deleteAll() {
-  const result = await query('DELETE FROM shopping RETURNING *');
+  const result = await pool.query('DELETE FROM shopping RETURNING *');
   // return result.rows[0];
-  return result;
+  return result.rows;
 }
