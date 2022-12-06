@@ -1,6 +1,6 @@
 import { pool } from "../index.js";
 
-async function createTable() {
+export async function createTable() {
   const created = await pool.query(
     `CREATE TABLE IF NOT EXISTS shopping (
       id SERIAL PRIMARY KEY,
