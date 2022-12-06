@@ -3,6 +3,7 @@ import express from 'express';
 import {
   getShoppingList,
   postListItem,
+  completedItem,
   // deleteAll,
 } from '../models/shoppingList.js';
 
