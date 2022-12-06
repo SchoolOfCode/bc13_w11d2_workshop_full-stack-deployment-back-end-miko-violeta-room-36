@@ -1,8 +1,9 @@
 import express from 'express';
+// import { createTable } from '../db/scripts/createTable.js';
 import {
   getShoppingList,
   postListItem,
-  deleteAll,
+  // deleteAll,
 } from '../models/shoppingList.js';
 
 const router = express.Router();
@@ -19,9 +20,10 @@ router.post('/', async (req, res) => {
   res.status(201).json({ success: true, payload: result });
 });
 
-router.delete('/', async function (req, res) {
-  const result = await deleteAll();
-  res.json({ success: true, payload: result });
-});
+// router.delete('/', async function (req, res) {
+//   const result = await deleteAll();
+
+//   res.json({ success: true, payload: result });
+// });
 
 export default router;
